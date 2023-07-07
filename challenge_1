@@ -1,0 +1,44 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.9;
+
+contract challenge {
+    uint num;
+    bool bn1;
+    string st1;
+    address ad1;
+
+    function setuint(uint _num) public {
+        num=_num;
+    }
+
+    function setBool(bool _bn1)public {
+        bn1=_bn1;
+    }
+
+    function setString(string memory _value) public {
+        st1 = _value;
+    }
+
+    function setAddress(address _add) public {
+        ad1 = _add;
+    }
+
+
+    // Get functions for each variable
+
+    function getUint() public view returns(uint ){
+        return num;
+    }
+
+    function getString() public view returns (string memory) {
+        return st1;
+    }
+
+    function getBool() public view returns (bool) {
+        return bn1;
+    }
+
+    function getAddress() public view returns (address) {
+        return ad1;
+    }
+}
